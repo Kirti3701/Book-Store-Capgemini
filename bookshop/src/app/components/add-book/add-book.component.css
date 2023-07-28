@@ -1,0 +1,13 @@
+h1 {
+    background-color: white;
+    color: rgb(193, 67, 75);
+    text-align: center;
+    padding-top: 50px ;
+    font-size: 40px;
+    font-family: Roboto, Helvetica Neue, sans-serif;
+}
+
+input[type=checkbox] {
+    background-color: #c83576;
+    color: #c83576;
+}

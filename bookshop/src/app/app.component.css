@@ -1,0 +1,84 @@
+* {
+    box-sizing: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #c83576;
+}
+
+li,
+a {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    font-family: Roboto, Helvetica Neue, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(182, 179, 179);
+    padding: 15px 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.logo {
+    cursor: pointer;
+
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+a:hover {
+    border-bottom: 4px solid blue;
+    color: white;
+    padding-bottom: 7px;
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+.a .active {
+    border-bottom: 4px solid blue;
+    color: white;
+    width: 100%;
+    transition: 0.3s ease;
+    padding-bottom: 7px;
+}
+
+.nav__links li a.active {
+    border-bottom: 4px solid blue;
+    color: white;
+    padding-bottom: 7px;            
+}
+
+.nav__links li a:hover,
+.nav__links li a.active {
+    border-bottom: 4px solid blue;
+    color: white;
+}
+
+/* Add styles for the underline after the link */
+.nav__links li a:hover:after,
+.nav__links li a.active:after {
+    width: 100%;
+}

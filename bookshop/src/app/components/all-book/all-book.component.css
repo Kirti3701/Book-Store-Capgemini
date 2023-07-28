@@ -1,0 +1,40 @@
+p {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding-top: 40px ;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    width: 220px;
+    height: 400px;
+    margin: 6px;
+    border-radius: 15px;
+    box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgb(220, 217, 217) ;
+    transition: .3s ease-in;
+}
+
+.card:hover {
+    background:rgb(240, 237, 237);
+}
+
+.card-image {
+    background-color: aqua;
+    height: 200px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 5px;
+    border: 0.2px solid rgb(175, 173, 173);
+}

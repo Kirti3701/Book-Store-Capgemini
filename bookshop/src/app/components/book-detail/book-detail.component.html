@@ -1,0 +1,32 @@
+<h1>Book Details</h1>
+<div class="row justify-content-centre mt-5"
+    style="justify-content: center; font-family: Roboto, Helvetica Neue, sans-serif;">
+    <div class="col-md-10">
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text"  class="form-control" formControlName="title" required>
+            </div>
+            <div class="form-group">
+                <label>Author</label>
+                <input type="text" class="form-control" formControlName="author" required>
+            </div>
+            <div class="form-group">
+                <label>ImageUrl</label>
+                <input type="text" class="form-control" formControlName="imageurl" required>
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input type="text" class="form-control" formControlName="price" required>
+            </div>
+            <div class="form-group">
+                <label class="featured">Featured</label><br>
+                <input type="checkbox" id="featured" formControlName="featured" value="featured">
+                <span class="checkmark"></span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit"
+                    style="background: #c83576; border-color: #c83576;">SUBMIT</button>
+            </div>
+        </form>
+    </div>

@@ -1,0 +1,96 @@
+    <h1>Featured Section</h1>
+   
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+            }
+    
+            .card {
+                background-color: white;
+                width: 200px;
+                height: 400px;
+                margin: 6px;
+                border-radius: 15px;
+                box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgb(220, 217, 217);
+                transition: .3s ease-in;
+            }
+    
+            .card:hover {
+                background: rgb(240, 237, 237);
+            }
+    
+            .image {
+                justify-content: center;
+    
+                height: 200px;
+                background-size: cover;
+                border-radius: 15px 15px 0 0;
+                border: 0.2px solid rgb(175, 173, 173);
+            }
+    
+            .image {
+                background-image: url("{{book.imageurl}}");
+            }
+    
+            .button {
+                margin-top: 20px;
+                border: 0;
+                font-weight: 500;
+                background-color: rgb(240, 237, 237);
+            }
+    
+            .button1:hover {
+                background: rgb(247, 198, 142);
+            }
+    
+            .button1 {
+                color: rgb(254, 103, 9);
+                padding-right: 20px;
+                margin-left: 10px;
+                margin-right: 20%;
+            }
+    
+            .button2 {
+                color: red;
+    
+    
+            }
+    
+            .button2:hover {
+                background: rgb(247, 161, 161);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            
+                <div class=" card" *ngFor="let book of featuredBooks; let i = index">
+                    <img class="image" src="{{book.imageurl}}" alt="{{book.title}}">
+                    <div>
+                        <h4 style="font-weight: bold; padding-left: 10px;">{{book.title}}</h4>
+                    </div>
+                    <h4 style="font-weight: lighter; padding-left: 10px;">{{book.author}}</h4>
+                    <h5 style="font-weight: bold; padding-left: 10px;">Best Buy {{book.price}}</h5>
+                    <h5
+                        style="position: absolute; top: 0%; margin-top: 2px; margin-left: 2px;  border-radius:  15px 0 0 0; background: #c83576;color: white; font-size: 20px;" *ngIf = "book.featured === 'true'">
+                        Featured</h5>
+                    <div>
+                        <button class=" button button1" routerLink="/edit-book/{{book._id}}">EDIT</button>
+                        <button class="button button2" (click)="delete(book._id)">DELETE</button>
+                    </div>
+                    
+            </div>
+        </div>
+    </body>
+    
+    </html>
